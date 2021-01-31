@@ -1,0 +1,36 @@
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+/*
+.container {
+  margin: 20px;
+}
+
+button {
+  color: white;
+  background-color: green;
+  height: 50px;
+  width: 100px;
+  opacity: 50%;
+  font-size: 16px;
+  border: 0px;
+}
+
+table {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  text-transform: uppercase;
+  opacity: 85%;
+}
+
+th {
+  width: 150px;
+  text-align: left;
+  color: grey;
+} */
