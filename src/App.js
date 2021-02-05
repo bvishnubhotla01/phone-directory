@@ -3,11 +3,23 @@ import Header from "./Header";
 import "./App.css";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      subscribersListToShow: [
+        { id: 1, name: "Shilpa Bhat", phone: "11111111111" },
+        { id: 2, name: "Srishti Goel", phone: "9999999999" },
+      ],
+    };
+  }
+  clickHandler(message) {
+    alert(message);
+  }
+
   render() {
-    let subscribers = [
-      { id: 1, name: "Shilpa Bhat", phone: "8888888888" },
-      { id: 2, name: "Srishti Goel", phone: "9999999999" },
-    ];
+    // let subscribers = [
+
+    // ];
     return (
       <div>
         <Header heading="Phone Directory" />
@@ -18,13 +30,21 @@ class App extends Component {
             <span className="grid-item name-heading">Name</span>
             <span className="grid-item phone-heading">Phone</span>
           </div>
-          {subscribers.map((subscriber) => {
+          {this.state.subscribersListToShow.map((subscriber) => {
             return (
               <div key={subscriber.id} className="grid-container">
                 <span className="grid-item">{subscriber.name}</span>
                 <span className="grid-item">{subscriber.phone}</span>
                 <span>
-                  <button className="delete-btn">DELETE</button>
+                  <button
+                    className="delete-btn"
+                    onClick={this.clickHandler.bind(
+                      this,
+                      "Delete Handler Clicked"
+                    )}
+                  >
+                    DELETE
+                  </button>
                 </span>
               </div>
             );
