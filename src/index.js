@@ -5,10 +5,10 @@ import "./index.css";
 import AddSubscriber from "./AddSubscriber";
 import reportWebVitals from "./reportWebVitals";
 import "./common/common.css";
-import App from "./App";
+import PhoneDirectory from "./PhoneDirectory";
 ReactDOM.render(
   <React.StrictMode>
-    <App />,
+    <PhoneDirectory />,
   </React.StrictMode>,
   document.getElementById("root")
 );
