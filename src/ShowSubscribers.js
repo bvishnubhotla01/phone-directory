@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import "./ShowSubscribers.css";
+import { Link } from "react-router-dom";
 
 class ShowSubscribers extends Component {
   constructor() {
@@ -9,23 +10,14 @@ class ShowSubscribers extends Component {
       subscribersListToShow: [],
     };
   }
-  clickHandler(message) {
-    alert(message);
-  }
-
-  componentDidMount() {
-    let newSubscriber = { id: 1, name: "Shilpa Bhat", phone: "11111111111" };
-    let subscriberList = this.state.subscribersListToShow;
-    subscriberList.push(newSubscriber);
-    this.setState({ subscribersListToShow: subscriberList });
-  }
   render() {
     return (
       <div>
         <Header heading="Phone Directory" />
         <div className="component-body-container">
-          <button className="custom-btn add-btn">Add</button>
-
+          <Link to="/add">
+            <button className="custom-btn add-btn">Add</button>
+          </Link>
           <div className="grid-container heading-container">
             <span className="grid-item name-heading">Name</span>
             <span className="grid-item phone-heading">Phone</span>
